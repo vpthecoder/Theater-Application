@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/jsf/ShowMovies.xhtml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/entity/ZIPCODES.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/entity/MOVIESOFTHEATERS.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/bean/MainPageBean.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/entity/THEATERS.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/entity/MOVIESOFTHEATERSPK.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/entity/MOVIES.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/conf/persistence.xml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/index.xhtml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/jsf/ShowTheaters.xhtml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/conf/MANIFEST.MF</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/jsf/ShowTimes.xhtml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/bean/PayforTicketsBean.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/bean/ShowTheatersBean.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/entity/TIMESOFMOVIES.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/jsf/PaymentAccept.xhtml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/EJB/theaterEJB.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/entity/TIMES.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/jsf/Tickets.xhtml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/jsf/MainPage.xhtml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/src/java/entity/TIMESOFMOVIESPK.java</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/jsf/ConfirmandPay.xhtml</file>
+            <file>file:/C:/Users/vp122/OneDrive/Documents/NetBeansProjects/Theater/web/WEB-INF/glassfish-resources.xml</file>
+        </group>
+    </open-files>
+</project-private>

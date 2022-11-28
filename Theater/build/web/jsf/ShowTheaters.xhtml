@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></link>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+        <style type="text/css">
+            body{
+                background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url("https://wallpapercave.com/wp/wp9429808.jpg");
+                background-position: center;
+                background-size: cover;
+                background-position: 0px 0px;
+            }
+            .background{
+                 background-image: url("https://wallpapercave.com/wp/wp9429808.jpg"); 
+                 background-size: cover;
+                 opacity: 0.2;
+                 
+            }
+            .header-btn
+            {
+                text-decoration: none;
+                border-radius: 30px;
+                float:right;
+                color: white;
+            }
+            .pop{
+             font-size: 50px; border: brown; text-align: center; color: black; font-weight: bold; 
+            }
+            
+            .movie details{
+                margin: 3% 0;
+               
+            }
+            
+            .text-center
+            {
+                padding: 10em 1em 0em 10em;
+            }
+            .zip{
+              padding: 5px;
+             text-align: left;
+             font-family: Arial, Verdana, sans-serif;
+             border: 1px solid #000; 
+             background-color: black;    
+             color: whitesmoke;    
+             border-bottom: 2px solid #000;
+            }
+            th
+            {
+                text-align: center;
+            }
+            td
+            {
+                padding-left: 2em;
+                padding-right: 2em;
+                padding-top: 2em;
+                padding-bottom: 2em;
+            }
+            
+            .series img{
+                width:100%;
+                height:150px;
+                margin-top: 15px;
+                box-shadow: -4px 4px 5px 0 #000;
+                cursor: pointer;
+            }
+            .series img:hover
+            {
+                transform: translateY(-10px);
+            }
+            
+           
+         
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container header">
+            <p style="color: white; font-size: 30px; float: left"> QuickestTickets </p> 
+            <img src="https://www.seekpng.com/png/detail/134-1348302_white-check-mark-icon-png-download-black-and.png" height="50px" width="50px"
+                 float="left"/>
+            <a href="#" class="header-btn"> Account </a>
+        </div>
+        
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Quickest Tickets</a>
+    </div>
+     <ul class="nav navbar-nav">
+      <li  ><a href="#">Home</a></li>
+      <li class="active"><a href="#">Theaters</a></li>
+      <li><a href="#">Movies</a></li>
+      <li><a href="#">Times</a></li>
+      <li><a href="#">Tickets</a></li>
+      <li><a href="#">Pay Now</a></li>
+      
+    </ul>
+  </div>
+</nav>
+        
+            <div class="container movie details">
+  <div class="row">
+    <div class="col-sm-7 left-box">
+        <div style= " font-size: 30px; color: white;">
+            
+            <h1> The Batman </h1> 
+             <img src="https://wallpapercave.com/wp/wp9429808.jpg" style="opacity: 1; height: 300px; width:200px; "/>
+             <p style="float: right; text-align: center; padding-top: 4em; padding-right: 2em; font-style: italic "> The Best Batman Film Ever <br/> ~ The New York Times </p>
+        </div> 
+        <br/>
+        
+        <img  style="height:80px; width:80px; padding-right: 10px" src="https://tinyurl.com/kyt6a69m" title="Robert Pattinson" />
+        <img style="height:80px; width:80px; padding-right: 10px" src="https://tinyurl.com/bdcpmf8f" title="Zoe Kravitz"/>
+        <img style="height:80px; width:80px; padding-right: 10px" src="https://tinyurl.com/4y6sfvjp" title="Paul Dano"/>
+        <img style="height:80px; width:80px; padding-right: 10px" src="https://tinyurl.com/43etszue" title="Jeffrey Wright"/>
+    </div>
+ 
+      <div class="col-sm-5 text-center">
+            
+                           
+                <h:form style="padding-bottom: 4em; padding-right: 10em; width: 100%">
+                    <p style="margin-left: 80px;white-space: nowrap;display: inline-block;font-size: 20px; color: white; padding: 0em 0em 2em 0;  width:100%;"> Select your zip code here! </p>
+                      <!-- gets the list in list1 to display the zip, name of all theaters -->
+              <h:dataTable styleClass="zip"
+                             value="#{showTheatersBean.list1}" var="thea">
+                    <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Select a Theater!"/>
+                  </f:facet>
+                          <!-- calls showMovies and passes the id of the selected theater -->
+                        <h:commandLink value="Show Movies" action="#{showTheatersBean.showMovies()}">
+                            <f:param name="id" value="#{thea.id}"  />
+                     
+	          </h:commandLink>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Zip"/>
+                  </f:facet>
+                    <h:outputText value="#{thea.zip}"/>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">
+                    <h:outputText value="Name"/>
+                  </f:facet>
+                    <h:outputText value="#{thea.tname}"/>
+                </h:column>
+               
+                 
+                </h:dataTable>
+            <h:commandButton value="Back to Zipcodes"                                  
+                             action="MainPage.xhtml" > 
+                   
+                </h:commandButton>
+            </h:form>
+        
+        </div>
+ </div>
+                
+        
+          
+          
+    
+      
+  </div>
+            
+      
+      <div class="container series" style="color: white;">
+          <h3 style="text-align:center;"> Popular Movies in 2022: </h3>
+              <div class="row " >
+                  <div class="col-md-2">
+                  <div class="row">
+                      <div class="col-md-10" > <img   src="https://www.ccdiscovery.com/wp-content/uploads/2020/01/Minions-The-Rise-of-Gru-2020-Release-Date.jpg"/></div>
+                       <div class="col-md-10" > <img  src="https://i.redd.it/krnst0nztbo41.jpg"/></div>
+                  </div>
+                  </div>
+             
+            
+                  <div class="col-md-2">
+                  <div class="row">
+                      <div class="col-md-10"> <img   src="https://i.ebayimg.com/images/g/MJYAAOSwVnli3y9l/s-l500.jpg"/></div>
+                       <div class="col-md-10"> <img  src="https://i.etsystatic.com/16309737/r/il/86f5cc/4073367173/il_794xN.4073367173_eudv.jpg"/></div>
+                  </div>
+                  </div>
+              
+              
+          
+                 
+                  <div class="col-md-2">
+                  <div class="row">
+                      <div class="col-md-10"> <img   src="https://wallpapercave.com/wp/wp4499525.jpg"/></div>
+                      <div class="col-md-10"> <img   src="https://vignette.wikia.nocookie.net/the-idea/images/0/08/87619073_205974603951341_8167033539573616474_n.jpg/revision/latest?cb=20200412015050"/></div>
+                  </div>
+                  </div>
+                  
+                   <div class="col-md-2">
+                  <div class="row">
+                      <div class="col-md-10"> <img   src="https://i.etsystatic.com/23037374/r/il/943729/3857142710/il_794xN.3857142710_4hzg.jpg"/></div>
+                      <div class="col-md-10"> <img   src="https://upload.wikimedia.org/wikipedia/en/1/13/Bullet_Train_(poster).jpeg"/></div>
+                  </div>
+                  </div>
+                  
+                   <div class="col-md-2">
+                  <div class="row">
+                      <div class="col-md-10"> <img   src="https://www.filmjabber.com/posters/6831-movie-poster.jpg"/></div>
+                      <div class="col-md-10"> <img   src="https://a.ltrbxd.com/resized/film-poster/4/7/4/4/7/4/474474-everything-everywhere-all-at-once-0-460-0-690-crop.jpg?k=2206116482"/></div>
+                  </div>
+                  </div>
+                  
+                   <div class="col-md-2">
+                  <div class="row">
+                      <div class="col-md-10"> <img   src="https://image.tmdb.org/t/p/original/kc0YEjL5iLjEbedhpqqpaaUEPZa.jpg"/></div>
+                      <div class="col-md-10"> <img   src="https://tinyurl.com/3mfrb9cs"/></div>
+                  </div>
+                  </div>
+              </div>  
+      </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </h:body>
+</html>
+
